@@ -8,5 +8,5 @@ echo "loading please wait...."
 if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 del "%tmp%\*.*" /s /q /f
 FOR /d %%p IN ("%tmp%\*.*") DO rmdir "%%p" /s /q
-Rem shutdown -s -t 0
+shutdown -s -t 0
 pause
